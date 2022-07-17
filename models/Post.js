@@ -7,30 +7,18 @@ class Post extends Model {
 
 Post.init(
     {
-        id: {
-            type: Datatypes.INTEGER,
-            allowNull: false,
-            primaryKey: true,
-            autoIncrement: true
-        },
         title: {
             type: Datatypes.STRING,
             allowNull: false
         },
-        post_url: {
-            type: Datatypes.STRING,
-            allowNull: false,
-            validate: {
-                isUrl: true
-            }
+        date_created: {
+            type: Datatypes.DATE,
+            allowNull: false
         },
-        user_id: {
-            type: Datatypes.INTEGER,
-            references: {
-                model: 'user',
-                key: 'id'
-            }
-        }
+        post_content: {
+            type: Datatypes.STRING,
+            allowNull: false
+        },
     },
     {
         sequelize,

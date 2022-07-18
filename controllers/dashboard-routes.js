@@ -8,7 +8,7 @@ router.get('/', withAuth, (req, res) => {
         include: [Post, User, Comment]
     })
     .then(dbPostData => {
-        const posts =dbPostData.map(post => post.get({ plain: true }))
+        const posts = dbPostData.map(post => post.get({ plain: true }))
     })
     .catch(err => {
         console.log(err);

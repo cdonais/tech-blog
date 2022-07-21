@@ -1,19 +1,18 @@
-<ol class="post-list">
+<ul class="post-list">
     {{#each posts as |post|}}
     <li>
-        <article class="post">
+        <article class="post center-align">
             <div>
                 <h2 class="post-title">{{post.title}}</h2>
                 <h3 class="username">{{post.username}}</h3>
                 <h4 class="date-created">{{post.date_created}}</h4>
                 <p class="post-content">{{post.content}}</p>                
             </div>
-            {{#if loggedIn}}
             <div class="comments">
                 {{#each this}}
                 <section class="comment">
                    <div class="comment-info">
-                   {{user.username}} on {{format_date created_at}}
+                   {{user.username}} on {{created_at}}
                    </div>
                    <div class="text">
                     {{comment_text}}
@@ -24,4 +23,4 @@
         </article>
     </li>
     {{/each}}
-</ol>
+</ul>

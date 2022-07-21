@@ -27,12 +27,12 @@
                 <h4 class="date-created">{{post.date_created}}</h4>
                 <p class="post-content">{{post.content}}</p>                
             </div>
-            {{#if loggedIn}}
             <div class="comments">
                 {{#each this}}
                 <section class="comment">
                    <div class="comment-info">
-                   {{user.username}} on {{format_date created_at}}
+                    
+                   {{user.username}} on {{ created_at}}
                    </div>
                    <div class="text">
                     {{comment_text}}
@@ -42,5 +42,7 @@
             </div>
         </article>
        </li>
+       {{/each}}
     </ol>
 </section>
+{{/if}}

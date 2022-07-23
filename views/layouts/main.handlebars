@@ -12,16 +12,15 @@
 <body>
   <div class="wrapper">
     <header>
-      <h1>
-        <a href="/">The Tech Blog</a>
-      </h1>
+      <h1>The Tech Blog</h1>
       <nav class="nav-wrapper #004d40 teal darken-4">
         <a href="/">Home</a>
         <a href="/dashboard">Dashboard</a>
         {{#if loggedIn}}
-        <button id="logout" class="btn-no-style">logout</button>
+        <button id="logout" class="btn-no-style">Logout</button>
         {{else}}
-        <a href="/login">login</a>
+        <a href="/login">Login</a>
+        <a href="/sign-up">Sign-Up</a>
         {{/if}}
       </nav>
     </header>

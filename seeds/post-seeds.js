@@ -1,18 +1,20 @@
-const Post = require('../models/Post');
+const Post = require('../models/post');
 
 const postData = [
     {
-        title: 'This is a Blog Post',
-        content: "fheifhtweitfteiwtjiewjfoiejfoewjiejij"
-        
+        title: "What's New in Tech?",
+        content: "fLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        user_id: 2
     },
     {
-        title: 'Another Blog Post',
-        content: "fkogjkogkrjogjrogjorgjroegjorgj"
+        title: 'JQuery, in or out?',
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        user_id: 3
     },
     {
-        title: 'Also a Blog Post',
-        content: "gkrlgjkeogjrogkjoregjk."
+        title: 'Check out this new NPM!',
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        user_id: 1
     }
 ];
 

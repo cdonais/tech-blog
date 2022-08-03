@@ -19,22 +19,20 @@
     <ul>
        {{#each posts as |post|}} 
        <li>
-                <article class="post">
+                <article class="post card">
             <div>
-                <h3 class="post-title">{{post.title}}</h2>
+                <h3 class="post-title  #004d40 teal darken-4 center-align">{{post.title}}</h2>
                 <h4 class="username">by {{user.username}} on {{createdAt}}</h3>
-                <p class="post-content">{{post.content}}</p>                
+                <p class="post-content">{{post.content}}</p>
+                 <p>Comments:</p>
+                
             </div>
             <div class="comments">
-                {{#each this}}
+                {{#each comments as |comment|}}
                 <section class="comment">
                    <div class="comment-info">
-                    
-                   {{user.username}} 
+                   {{user.username}} said: {{comment_text}}
                    </div>
-                   <div class="text">
-                    {{comment_text}}
-                   </div> 
                 </section>
                 {{/each}}
             </div>

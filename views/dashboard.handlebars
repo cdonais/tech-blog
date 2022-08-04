@@ -3,8 +3,8 @@
 
     <form class="new-post-form">
         <div>
-            <label for="post-title">Title</label>
-            <input type="text" id="post-title" name="post-title"/>
+            <label for="postTitle">Title</label>
+            <input type="text" id="postTitle" name="postTitle"/>
         </div>
         <div>
             <label for="new-post">Post</label>
@@ -24,10 +24,12 @@
                 <h3 class="post-title  #004d40 teal darken-4 center-align">{{post.title}}</h2>
                 <h4 class="username">by {{user.username}} on {{createdAt}}</h3>
                 <p class="post-content">{{post.content}}</p>
-                 <p>Comments:</p>
-                
+                         <form class="new-post-form">
+    </form>
+       
             </div>
-            <div class="comments">
+            <div class="comments card">
+                 <h5>Comments:</h5>
                 {{#each comments as |comment|}}
                 <section class="comment">
                    <div class="comment-info">

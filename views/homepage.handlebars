@@ -1,17 +1,23 @@
 <ul class="post-list">
     {{#each posts as |post|}}
     <li>
-        <article class="post center-align">
+        <article class="post card center-align">
             <div>
-                <h2 class="post-title">{{post.title}}</h2>
-                <h3 class="username">{{user.username}} on {{createdAt}}</h3>
-                <p class="post-content">{{post.content}}</p>                
+                <h2 class="post-title #004d40 teal darken-4">{{post.title}}</h2>
+                <h3 class="username">by {{user.username}} on {{createdAt}}</h3>
+                <p class="post-content">{{post.content}}</p>  
+                        <div>
+            <label for="new-comment">Add Comment</label>
+            <input type="text" id="new-comment" name="new-comment"/>
+        </div>
+        <button type="submit" class="btn">Add</button>
+              
             </div>
             <div class="comments">
                 {{#each this}}
                 <section class="comment">
                    <div class="comment-info">
-                   {{user.username}}  {{created_at}}
+                   {{user.username}}  {{createdAt}}
                    </div>
                    <div class="text">
                     {{comment_text}}

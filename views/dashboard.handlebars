@@ -33,7 +33,7 @@
                 {{#each comments as |comment|}}
                 <section class="comment">
                    <div class="comment-info">
-                   {{user.username}} said: {{comment_text}}
+                   {{user.username}} said on {{format_date created_at}}: {{comment_text}}
                    </div>
                 </section>
                 {{/each}}

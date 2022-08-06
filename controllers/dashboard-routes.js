@@ -1,12 +1,12 @@
 const router = require('express').Router();
-const { Post, User, Comment } = require('../../models');
-// const withAuth = require('../util/auth');
+const { Post, User, Comment } = require('../models');
+const withAuth = require('../util/auth');
 
-router.get('/', (req, res) => {
+router.get('/', withAuth, (req, res) => {
     Post.findAll({
-        // where: {
-        //     user_id: req.session.user_id
-        // },
+        where: {
+            user_id: req.session.user_id
+        },
         include: [
             {
             model: Comment,

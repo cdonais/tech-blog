@@ -64,9 +64,10 @@ router.post('/', (req, res) => {
     });
 });
 router.post('/login', (req, res) => {
+    console.log(req.body)
     User.findOne({
         where: {
-            username: req.body.email
+            username: req.body.username
         }
     }).then(dbUserData => {
         if (!dbUserData) {
@@ -80,7 +81,7 @@ router.post('/login', (req, res) => {
           return;
         } 
         req.session.save(() => {
-
+            console.log(dbUserData.id, dbUserData.username);
             req.session.user_id = dbUserData.id;
             req.session.username = dbUserData.username;
             req.session.loggedIn = true;
